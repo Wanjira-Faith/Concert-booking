@@ -64,3 +64,8 @@
   .list-header{
     color: rgba(169, 42, 65, 1);
   }
+  #music-list{
+    list-style: none; 
+    color: #ccc;
+    border-bottom: 1px solid;
+  }
