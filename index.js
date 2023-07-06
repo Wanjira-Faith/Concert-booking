@@ -19,6 +19,7 @@ function displayMusicList(artists) {
    // A delete button for each artist
    const deleteButton = document.createElement("button");
    deleteButton.textContent = "Delete";
+   deleteButton.classList.add("delete-btn");
    deleteButton.addEventListener("click", () => {
      deleteArtist(artist.id);
    });
@@ -28,13 +29,25 @@ function displayMusicList(artists) {
       });
       musicList.appendChild(listItem);
     });
-
+  
     const artistIndex = artists[7];
     if(artistIndex){
       displayMusicDetails(artistIndex)
        }
+      }
+      function deleteArtist(artistId) {
+        const deleteUrl = `${url}/${artistId}`;
+        fetch(deleteUrl, {
+          method: "DELETE",
+        })
+          .then((resp) => resp.json())
+          .then((response) => {
+            console.log("Artist deleted:", response);
+            fetchArtists(); // Refresh the music list after deletion
+          });
+      }
 
-    }
+
     //display artists details
        function displayMusicDetails(artist) {
         const musicImage = document.getElementById("image");
@@ -74,6 +87,7 @@ function displayMusicList(artists) {
         liveBtn.addEventListener('click', (e) => {
            alert("Download the link from our official website to watch the live concert!");
      });
+    }  
   const form = document.getElementById("artist-form");
   form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -125,18 +139,5 @@ function displayMusicList(artists) {
    });
    musicList.appendChild(listItem);
 
-function deleteArtist(artistId) {
-  const deleteUrl = `${url}/${artistId}`;
-  fetch(deleteUrl, {
-    method: "DELETE",
-  })
-    .then((resp) => resp.json())
-    .then((response) => {
-      console.log("Artist deleted:", response);
-      fetchArtists(); // Refresh the music list after deletion
-    });
-}
-
 
     
-}    
