@@ -36,3 +36,8 @@
     font-family: inter ;
     padding: 10px;
   }
+  .home-content{
+    margin-left: 5%;
+    font-family:lobster;
+    color: #ccc;
+  }
