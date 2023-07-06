@@ -20,4 +20,8 @@ function displayMusicList(artists) {
       musicList.appendChild(listItem);
     
     });
+    const artistIndex = artists[7];
+    if(artistIndex){
+      displayMusicDetails(artistIndex)
+       }
 }    
