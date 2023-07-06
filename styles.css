@@ -50,5 +50,7 @@
     font-size: 50px;
     margin-bottom: 20px;
   }
-  
-
+.music-container{
+ display: flex;
+ justify-content: space-between;
+}
