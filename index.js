@@ -24,7 +24,7 @@ function displayMusicList(artists) {
     if(artistIndex){
       displayMusicDetails(artistIndex)
        }
-
+    }
        function displayMusicDetails(artist) {
         const musicImage = document.getElementById("image");
         const name = document.querySelector(".name");
@@ -57,7 +57,11 @@ function displayMusicList(artists) {
           else {
             buyTicketBtn.textContent = "Sold out"
           }
-      
+    
         });
-       }
+        liveBtn.textContent = 'Live Concert';
+        liveBtn.addEventListener('click', (e) => {
+           alert("Download the link from our official website to watch the live concert!");
+     });
+    
 }    
