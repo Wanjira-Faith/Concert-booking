@@ -1,29 +1,39 @@
 document.addEventListener("DOMContentLoaded", () => {
     fetchArtists();
   });
-  const url = "http://localhost:3000/artists";
+const url = "http://localhost:3000/artists";
 
 function fetchArtists() {
   fetch(url)
     .then((resp) => resp.json())
     .then((artists) => displayMusicList(artists));
 }
-//display all artists in the music list
+//displays all artists list
 function displayMusicList(artists) {
     const musicList = document.getElementById("music-list");
-    artists.forEach((artist,index) => {
+
+      artists.forEach((artist,index) => {
       const listItem = document.createElement("li");
       listItem.textContent = artist.name;
+
+   // A delete button for each artist
+   const deleteButton = document.createElement("button");
+   deleteButton.textContent = "Delete";
+   deleteButton.addEventListener("click", () => {
+     deleteArtist(artist.id);
+   });
+      listItem.appendChild(deleteButton);
       listItem.addEventListener("click", () => {
         displayMusicDetails(artist);
       });
       musicList.appendChild(listItem);
-    
     });
+
     const artistIndex = artists[7];
     if(artistIndex){
       displayMusicDetails(artistIndex)
        }
+
     }
     //display artists details
        function displayMusicDetails(artist) {
@@ -107,6 +117,26 @@ function displayMusicList(artists) {
       console.log("Artist added:", artist);
     })
 });
+  
+   listItem.appendChild(deleteButton);
+
+   listItem.addEventListener("click", () => {
+     displayMusicDetails(artist);
+   });
+   musicList.appendChild(listItem);
+
+function deleteArtist(artistId) {
+  const deleteUrl = `${url}/${artistId}`;
+  fetch(deleteUrl, {
+    method: "DELETE",
+  })
+    .then((resp) => resp.json())
+    .then((response) => {
+      console.log("Artist deleted:", response);
+      fetchArtists(); // Refresh the music list after deletion
+    });
+}
+
 
     
 }    
