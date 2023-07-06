@@ -11,15 +11,15 @@
       "popular_releases": "Good Days,Nobody Gets Me,Blind,Snooze,Low,Notice,,Love Language ..."
     },
     {
-    "id": "2",
-    "name": "Brent Faiyaz",
-    "capacity": 450000,
-    "showtime": " July 21 ,06:45PM",
-    "location":"Finsbury Park, London",
-    "tickets_sold": 440000,
-    "popular_releases": "Jackie Brown,All Mine,Wasting Time,Trust,Gravity,Gang Over Luv,Sonder Son,Poison ...",
-    "image":"https://images.radio.com/aiu-media/brent-0fb00c66-4d88-4b1c-b1d6-053178de5668.jpg?width=800"
-  },
+      "id": "2",
+      "name": "Brent Faiyaz",
+      "capacity": 450000,
+      "showtime": " July 21 ,06:45PM",
+      "location": "Finsbury Park, London",
+      "tickets_sold": 440000,
+      "popular_releases": "Jackie Brown,All Mine,Wasting Time,Trust,Gravity,Gang Over Luv,Sonder Son,Poison ...",
+      "image": "https://images.radio.com/aiu-media/brent-0fb00c66-4d88-4b1c-b1d6-053178de5668.jpg?width=800"
+    },
     {
       "id": "3",
       "name": "Ice Spice",

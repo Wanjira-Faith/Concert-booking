@@ -177,9 +177,12 @@
     text-align: center;
     padding: 10px;
   }
-  .delete-btn{
-      padding: 5px 10px;
+
+    .delete-btn {
       float: right;
+      background-color: rgba(169, 42, 65, 1);
+    
     }
+    
   
 

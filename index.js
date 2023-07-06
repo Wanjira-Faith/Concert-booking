@@ -11,22 +11,15 @@ function fetchArtists() {
 //displays all artists list
 function displayMusicList(artists) {
     const musicList = document.getElementById("music-list");
-
+  
       artists.forEach((artist,index) => {
       const listItem = document.createElement("li");
       listItem.textContent = artist.name;
-
-   // A delete button for each artist
-   const deleteButton = document.createElement("button");
-   deleteButton.textContent = "Delete";
-   deleteButton.classList.add("delete-btn");
-   deleteButton.addEventListener("click", () => {
-     deleteArtist(artist.id);
-   });
-      listItem.appendChild(deleteButton);
       listItem.addEventListener("click", () => {
         displayMusicDetails(artist);
+        musicList.innerHTML = "";
       });
+
       musicList.appendChild(listItem);
     });
   
@@ -34,25 +27,8 @@ function displayMusicList(artists) {
     if(artistIndex){
       displayMusicDetails(artistIndex)
        }
-      }
-      function deleteArtist(artistId) {
-        const deleteUrl = `${url}/${artistId}`;
-        fetch(deleteUrl, {
-          method: "DELETE",
-        })
-          .then((resp) => resp.json())
-          .then((response) => {
-            console.log("Artist deleted:", response);
-            fetchArtists(); // Refresh the artist list after deletion
-
-            const deletedArtist = response.artist;
-            deletedArtist.push(deletedArtist);
-
-            return deletedArtist;
-          });
-    
-      }    
-    //display artists details
+    }
+           //display artists details
        function displayMusicDetails(artist) {
         const musicImage = document.getElementById("image");
         const name = document.querySelector(".name");
@@ -62,7 +38,9 @@ function displayMusicList(artists) {
         const availableTickets = document.getElementById("available-tickets");
         const buyTicketBtn = document.getElementById("buy-ticket-btn");
         const liveBtn = document.getElementById("live-concert-btn");
-      
+        const deleteBtn = document.querySelector(".delete-btn");
+
+
         musicImage.src = artist.image;
         name.textContent = artist.name;
         text.innerHTML = `<strong>Popular releases: </strong>${artist.popular_releases}`;
@@ -91,56 +69,74 @@ function displayMusicList(artists) {
         liveBtn.addEventListener('click', (e) => {
            alert("Download the link from our official website to watch the live concert!");
      });
-    }  
-  const form = document.getElementById("artist-form");
-  form.addEventListener("submit", (e) => {
-  e.preventDefault();
 
-  const nameInput = document.getElementById("name-input");
-  const imageInput = document.getElementById("image-input");
-  const popularReleasesInput = document.getElementById("popular-releases-input");
-
-  const newArtist = {
-    name: nameInput.value,
-    image: imageInput.value,
-    popular_releases: popularReleasesInput.value,
-  };
-
-    // Add the new artist to the list
-  function addArtistToMusicList(artist){
-    const musicList = document.getElementById("music-list");
-    const listItem = document.createElement("li");
-    listItem.textContent = artist.name;
-    listItem.addEventListener("click", () => {
-      displayMusicDetails(artist);
+     deleteBtn.textContent = 'Delete';
+     deleteBtn.addEventListener('click', () => {
+     deleteArtist(artist.id);
     });
-    musicList.appendChild(listItem);
-  }
-  fetch(url, {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(newArtist),
+ }  
+ function deleteArtist(artistId) {
+  fetch(`${url}/${artistId}`, {
+    method: "DELETE",
   })
-    .then((resp) => resp.json())
-    .then((artist) => {addArtistToMusicList(artist);
+    .then((resp) => {
+      if (resp.ok) {
+        console.log("Artist deleted:", artistId);
 
-      // Clear the input fields
-      nameInput.value = "";
-      imageInput.value = "";
-      popularReleasesInput.value = "";
-
-      console.log("Artist added:", artist);
+      } else {
+        console.error("Failed to delete artist:", artistId);
+      }
     })
-});
-  
-   listItem.appendChild(deleteButton);
-
-   listItem.addEventListener("click", () => {
-     displayMusicDetails(artist);
-   });
-   musicList.appendChild(listItem);
-
-
+}
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("artist-form");
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
     
+        const nameInput = document.getElementById("name-input");
+        const imageInput = document.getElementById("image-input");
+        const popularReleasesInput = document.getElementById("popular-releases-input");
+    
+        const newArtist = {
+          name: nameInput.value,
+          image: imageInput.value,
+          popular_releases: popularReleasesInput.value,
+        };
+    
+        // Add the new artist to the list
+        function addArtistToMusicList(artist) {
+          const musicList = document.getElementById("music-list");
+          const listItem = document.createElement("li");
+          listItem.textContent = artist.name;
+          listItem.addEventListener("click", () => {
+            displayMusicDetails(artist);
+          });
+          musicList.appendChild(listItem);
+        }
+    
+        const url = "http://localhost:3000/artists";
+    
+        fetch(url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newArtist),
+        })
+          .then((resp) => resp.json())
+          .then((artist) => {
+            addArtistToMusicList(artist);
+    
+            // Clear input fields
+            nameInput.value = "";
+            imageInput.value = "";
+            popularReleasesInput.value = "";
+    
+            console.log("Artist added:", artist);
+          })
+          .catch((error) => console.log(error));
+      });
+    });
+    
+    
+ 
