@@ -27,4 +27,12 @@
   justify-content: space-between;
   padding: 10px 10px 9px 10px;
 }
-  
+.navbar a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 10px;
+    background-color: rgb(56, 16, 95);
+    border-radius: 15px;
+    font-family: inter ;
+    padding: 10px;
+  }
