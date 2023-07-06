@@ -40,9 +40,14 @@
     margin-left: 5%;
     font-family:lobster;
     color: #ccc;
-  }.home-content h2{
+  }
+  .home-content h2{
     font-size: 60px;
     margin-top: 10px;
+    margin-bottom: 20px;
+  }
+  .home-content h3{
+    font-size: 50px;
     margin-bottom: 20px;
   }
   
