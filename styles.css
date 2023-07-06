@@ -1,3 +1,5 @@
+	@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+  @import url("https://fonts.google.com/specimen/Inter?query=inter");
 *{
     margin: 0;
     padding: 0;
@@ -14,10 +16,11 @@
     color: #ccc;
     }
   .header{
-    margin-left: 5%;
-    font-size: 20px;
+    margin-left: 2%;
+    font-size: 25px;
     font-family: lobster;
     font-weight: bolder;
+    margin-top: 20px;
   }
   .logo span{
     color: rgba(169, 42, 65, 1);
@@ -40,10 +43,12 @@
   .home-content{
     margin-left: 5%;
     font-family:lobster;
+    line-height: 2cm;
     color: #ccc;
+    margin-top: 68px;
   }
   .home-content h2{
-    font-size: 60px;
+    font-size: 68px;
     margin-top: 10px;
     margin-bottom: 20px;
   }
@@ -56,14 +61,14 @@
  justify-content: space-between;
 }
 .list-container{
-    /* margin-left: 10px; */
     font-size: 20px;
     font-weight: bold;
     line-height: 1.5cm;
     width: 30%;
   }
-  .list-header{
+  .list-header {
     color: rgba(169, 42, 65, 1);
+  
   }
   #music-list{
     list-style: none; 
@@ -140,6 +145,7 @@
     border: none;
     justify-content: space-around;
     padding: 40px;
+    margin-top: 20px;
   }
   .contact-header h2 {
     font-size: 24px;

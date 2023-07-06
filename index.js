@@ -8,7 +8,7 @@ function fetchArtists() {
     .then((resp) => resp.json())
     .then((artists) => displayMusicList(artists));
 }
-
+//display all artists in the music list
 function displayMusicList(artists) {
     const musicList = document.getElementById("music-list");
     artists.forEach((artist,index) => {
@@ -25,6 +25,7 @@ function displayMusicList(artists) {
       displayMusicDetails(artistIndex)
        }
     }
+    //display artists details
        function displayMusicDetails(artist) {
         const musicImage = document.getElementById("image");
         const name = document.querySelector(".name");
@@ -76,6 +77,17 @@ function displayMusicList(artists) {
     image: imageInput.value,
     popular_releases: popularReleasesInput.value,
   };
+
+    // Add the new artist to the list
+  function addArtistToMusicList(artist){
+    const musicList = document.getElementById("music-list");
+    const listItem = document.createElement("li");
+    listItem.textContent = artist.name;
+    listItem.addEventListener("click", () => {
+      displayMusicDetails(artist);
+    });
+    musicList.appendChild(listItem);
+  }
   fetch(url, {
     method: "POST",
     headers: {
@@ -84,16 +96,9 @@ function displayMusicList(artists) {
     body: JSON.stringify(newArtist),
   })
     .then((resp) => resp.json())
-    .then((artist) => {
-      // Add the new artist to the list
-      const musicList = document.getElementById("music-list");
-      const listItem = document.createElement("li");
-      listItem.textContent = artist.name;
-      listItem.addEventListener("click", () => {
-        displayMusicDetails(artist);
-      });
-      musicList.appendChild(listItem);
+    .then((artist) => {addArtistToMusicList(artist);
 
+    
       // Clear the input fields
       nameInput.value = "";
       imageInput.value = "";
