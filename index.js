@@ -63,5 +63,19 @@ function displayMusicList(artists) {
         liveBtn.addEventListener('click', (e) => {
            alert("Download the link from our official website to watch the live concert!");
      });
+  const form = document.getElementById("artist-form");
+  form.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const nameInput = document.getElementById("name-input");
+  const imageInput = document.getElementById("image-input");
+  const popularReleasesInput = document.getElementById("popular-releases-input");
+
+  const newArtist = {
+    name: nameInput.value,
+    image: imageInput.value,
+    popular_releases: popularReleasesInput.value,
+  };
+});
     
 }    
