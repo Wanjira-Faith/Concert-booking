@@ -19,3 +19,6 @@
     font-family: lobster;
     font-weight: bolder;
   }
+  .logo span{
+    color: rgba(169, 42, 65, 1);
+  }
