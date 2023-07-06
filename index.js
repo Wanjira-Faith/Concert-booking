@@ -24,4 +24,5 @@ function displayMusicList(artists) {
     if(artistIndex){
       displayMusicDetails(artistIndex)
        }
+       
 }    
