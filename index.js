@@ -43,11 +43,15 @@ function displayMusicList(artists) {
           .then((resp) => resp.json())
           .then((response) => {
             console.log("Artist deleted:", response);
-            fetchArtists(); // Refresh the music list after deletion
+            fetchArtists(); // Refresh the artist list after deletion
+
+            const deletedArtist = response.artist;
+            deletedArtist.push(deletedArtist);
+
+            return deletedArtist;
           });
-      }
-
-
+    
+      }    
     //display artists details
        function displayMusicDetails(artist) {
         const musicImage = document.getElementById("image");
@@ -122,8 +126,6 @@ function displayMusicList(artists) {
     .then((resp) => resp.json())
     .then((artist) => {addArtistToMusicList(artist);
 
-  
-      
       // Clear the input fields
       nameInput.value = "";
       imageInput.value = "";
