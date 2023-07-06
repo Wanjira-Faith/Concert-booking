@@ -121,4 +121,14 @@
     margin-bottom: 5px;
     font-weight: bold;
   }
+  form input[type="text"],
+  form input[type="email"],
+  form textarea  {
+   width: 100%;
+   padding: 10px;
+   background-color: #ccc;
+   border: 1px solid #ccc;
+   border-radius: 5px;
+   margin-bottom: 10px;
+ } 
 
