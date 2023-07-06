@@ -76,6 +76,32 @@ function displayMusicList(artists) {
     image: imageInput.value,
     popular_releases: popularReleasesInput.value,
   };
+  fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(newArtist),
+  })
+    .then((resp) => resp.json())
+    .then((artist) => {
+      // Add the new artist to the list
+      const musicList = document.getElementById("music-list");
+      const listItem = document.createElement("li");
+      listItem.textContent = artist.name;
+      listItem.addEventListener("click", () => {
+        displayMusicDetails(artist);
+      });
+      musicList.appendChild(listItem);
+
+      // Clear the input fields
+      nameInput.value = "";
+      imageInput.value = "";
+      popularReleasesInput.value = "";
+
+      console.log("Artist added:", artist);
+    })
 });
+
     
 }    
