@@ -22,3 +22,9 @@
   .logo span{
     color: rgba(169, 42, 65, 1);
   }
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 10px 9px 10px;
+}
+  
