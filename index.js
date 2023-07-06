@@ -122,7 +122,8 @@ function displayMusicList(artists) {
     .then((resp) => resp.json())
     .then((artist) => {addArtistToMusicList(artist);
 
-    
+  
+      
       // Clear the input fields
       nameInput.value = "";
       imageInput.value = "";

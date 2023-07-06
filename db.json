@@ -5,31 +5,19 @@
       "name": "SZA",
       "capacity": 200000,
       "showtime": "August 7 , 04:00PM",
-      "location":"Hard Rock, Miami",
+      "location": "Hard Rock, Miami",
       "tickets_sold": 160000,
-      "image":"https://people.com/thmb/xUqH8stLAg6peLW6ZSwlCpiPPj4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(734x349:736x351)/sza-met-gala-121322-37108b028e7a43f29e7504af9dbf86ab.jpg",
+      "image": "https://people.com/thmb/xUqH8stLAg6peLW6ZSwlCpiPPj4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc():focal(734x349:736x351)/sza-met-gala-121322-37108b028e7a43f29e7504af9dbf86ab.jpg",
       "popular_releases": "Good Days,Nobody Gets Me,Blind,Snooze,Low,Notice,,Love Language ..."
-      
-    },
-    {
-      "id": "2",
-      "name": "Brent Faiyaz",
-      "capacity": 450000,
-      "showtime": " July 21 ,06:45PM",
-      "location":"Finsbury Park, London",
-      "tickets_sold": 440000,
-      "popular_releases": "Jackie Brown,All Mine,Wasting Time,Trust,Gravity,Gang Over Luv,Sonder Son,Poison ...",
-      "image":"https://images.radio.com/aiu-media/brent-0fb00c66-4d88-4b1c-b1d6-053178de5668.jpg?width=800"
-      
     },
     {
       "id": "3",
       "name": "Ice Spice",
       "capacity": 350000,
       "showtime": " September 6 ,07:30PM",
-      "location":"Ellis Park, Adelaide ",
+      "location": "Ellis Park, Adelaide ",
       "tickets_sold": 310000,
-      "popular_releases":"Barbie World,Princess Diana ft Nicki Minaj,Munch,Barbie World,No Clarity ...",
+      "popular_releases": "Barbie World,Princess Diana ft Nicki Minaj,Munch,Barbie World,No Clarity ...",
       "image": "https://imgix.bustle.com/uploads/image/2023/2/10/d71249c8-13de-4fd8-80e8-b55d72d8a574-screen-shot-2023-02-10-at-45936-pm.jpg?w=800&fit=crop&crop=faces&auto=format%2Ccompress"
     },
     {
@@ -37,113 +25,100 @@
       "name": "Burna Boy",
       "capacity": 450000,
       "showtime": " July 11, 09:00PM",
-      "location":"Captital One Arena, Washington",
+      "location": "Captital One Arena, Washington",
       "tickets_sold": 440000,
-      "popular_releases":"Common Person,Last Last,Anybody,On The Low,Gbona,It's Plenty,Gbona,Time Flies,RollerCoaster ...",
+      "popular_releases": "Common Person,Last Last,Anybody,On The Low,Gbona,It's Plenty,Gbona,Time Flies,RollerCoaster ...",
       "image": "https://dailypost.ng/wp-content/uploads/2023/06/Burna-Boy.jpg"
-      
     },
     {
       "id": "5",
       "name": "Victony,Tempoe",
       "capacity": 50000,
       "showtime": "October 3, 06:30PM",
-      "location":"Prudential Center, Brooklyn",
+      "location": "Prudential Center, Brooklyn",
       "tickets_sold": 49992,
       "popular_releases": "Soweto,Dancing in the Fire,Wavy,Space & Time,Story of My Life ...",
-      "image":"https://i.ytimg.com/vi/DPBRGWUgQsA/maxresdefault.jpg"
-      
+      "image": "https://i.ytimg.com/vi/DPBRGWUgQsA/maxresdefault.jpg"
     },
     {
       "id": "6",
       "name": "Doja Cat",
       "capacity": 300000,
       "showtime": "September 27, 9:00PM",
-      "location":"TD Garden, Boston",
+      "location": "TD Garden, Boston",
       "tickets_sold": 299990,
       "popular_releases": "Rules,Hot Pink,Best Friend,Streets,Woman,Say So,Need to know ...",
       "image": "https://i0.statig.com.br/bancodeimagens/6p/tc/zi/6ptcziky1jhvcr6hv53nlgjo3.jpg"
-      
     },
     {
       "id": "7",
       "name": "Rema",
       "capacity": 250000,
       "showtime": " November 17, 07:30PM",
-      "location":"United Center, Chicago",
+      "location": "United Center, Chicago",
       "tickets_sold": 220000,
       "popular_releases": "Dumebi,Calm Dowm,Beamer,Corny88,Ginger Me,Bounce,Soundgasm ...",
       "image": "https://cdn3.pitchfork.com/longform/918/remaheader1440.jpg"
-      
     },
     {
       "id": "8",
       "name": "J.Cole",
       "capacity": 500000,
       "showtime": "October 20, 08:30PM",
-      "location":"Centennial Park, Sydney",
+      "location": "Centennial Park, Sydney",
       "tickets_sold": 480000,
       "popular_releases": "Change,Middle Child,Work Out,Love Yourz,Work Out,Deja Vu ...",
-      "image":"https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/12/13/20/cole.jpg"
-      
+      "image": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2016/12/13/20/cole.jpg"
     },
     {
       "id": "9",
       "name": "Rihanna",
       "capacity": 500000,
       "showtime": "December 11, 07:30PM",
-      "location":"Carribean Gardens, Scoresby",
+      "location": "Carribean Gardens, Scoresby",
       "tickets_sold": 499991,
       "popular_releases": "Lift Me Up,Umbrella ,Diamonds,We Found Love ,Only Girl,Rude Boy, Work ,Stay ,Take a Bow ...",
       "image": "https://stylecaster.com/wp-content/uploads/2023/01/rihanna-1-1.jpg?w=960&h=540&crop=1"
-      
     },
     {
       "id": "10",
       "name": "Future",
       "capacity": 200000,
       "showtime": "November 4, 10:00PM",
-      "location":"HB Arena , Jooundalup",
+      "location": "HB Arena , Jooundalup",
       "tickets_sold": 199000,
       "popular_releases": "Mask Off,Life Is Good,Pushing P,Love You Better,Jumpman,Low Life,Stick Talk ...",
-      "image":"https://media.gq.com/photos/6255cb4ce2859f694bf0b1db/master/w_1600%2Cc_limit/GQ0522_Future_03.jpg"
-      
+      "image": "https://media.gq.com/photos/6255cb4ce2859f694bf0b1db/master/w_1600%2Cc_limit/GQ0522_Future_03.jpg"
     },
     {
       "id": "11",
       "name": "Amapiano ",
       "capacity": 80000,
       "showtime": "December 19, 06:00PM",
-      "location":"Johannesburg, SouthAfrica",
+      "location": "Johannesburg, SouthAfrica",
       "tickets_sold": 78000,
       "popular_releases": "Jerusalema by Master KG ft. Nomcebo Zikode,Ke Star by Focalistic ft. Vigro Deep ...",
       "image": "https://cms.forbesafrica.com/wp-content/uploads/2021/10/Screenshot-2021-10-22-at-14.32.24-1.png"
-      
-
     },
-  
     {
       "id": "12",
       "name": "Nicki Minaj",
       "capacity": 400000,
       "showtime": "August 28, 09:00PM",
-      "location":"Brisbane Showgrounds, Bowen Hills",
+      "location": "Brisbane Showgrounds, Bowen Hills",
       "tickets_sold": 380000,
       "popular_releases": "Red Ruby Da Sleeza,Super Bass,Anaconda,Barbie World,Pills N Potions,Chun-Li ...",
       "image": "https://assets.vogue.com/photos/58913ae6b482c0ea0e4d6de4/16:9/w_1280,c_limit/5-things-you-didnt-know-about-nicki-minaj.jpg"
-      
     },
-
     {
       "id": "13",
       "name": "Sauti sol",
       "capacity": 40000,
       "showtime": "December 31, 08:00PM",
-      "location":"Diani Beach, Kenya",
+      "location": "Diani Beach, Kenya",
       "tickets_sold": 39000,
       "popular_releases": "Suzanna,Melanin,Short N Sweet,Kuliko Jana,Isabella,Nenda Lote,My Everything ...",
       "image": "https://citizentv.s3.amazonaws.com/95807/conversions/Sauti-Sol-og_image.webp"
     }
-   
   ]
 }

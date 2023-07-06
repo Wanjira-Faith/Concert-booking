@@ -177,4 +177,9 @@
     text-align: center;
     padding: 10px;
   }
+  .delete-btn{
+      padding: 5px 10px;
+      float: right;
+    }
+  
 
