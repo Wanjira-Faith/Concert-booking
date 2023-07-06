@@ -24,5 +24,15 @@ function displayMusicList(artists) {
     if(artistIndex){
       displayMusicDetails(artistIndex)
        }
-       
+       function displayMusicDetails(artist) {
+        const musicImage = document.getElementById("image");
+        const name = document.querySelector(".name");
+        const text = document.querySelector(".text");
+        const date = document.getElementById("date");
+        const location = document.getElementById("location");
+        const availableTickets = document.getElementById("available-tickets");
+        const buyTicketBtn = document.getElementById("buy-ticket-btn");
+        const liveBtn = document.getElementById("live-concert-btn");
+       }
+      
 }    
