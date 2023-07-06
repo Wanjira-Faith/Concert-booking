@@ -143,4 +143,21 @@
   .contact-header h2 {
     font-size: 24px;
   }
+  button{
+    background-color: rgb(33, 134, 24);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: black;
+    font-weight: bold;
+    border: none; 
+    cursor: pointer;
+    font-size: 17px;
+    font-family: literata;
+  }
+  .music-details  button {
+    margin-right: 10px;
+  }
+    button[type="submit"]:hover {
+    background-color: #45a049;
+  }
 
