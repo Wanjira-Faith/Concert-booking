@@ -43,6 +43,21 @@ function displayMusicList(artists) {
         let availableTicketsCount = artist.capacity - artist.tickets_sold;
         availableTickets.innerHTML = `<strong>Available Tickets: </strong>${availableTicketsCount}`;
 
-        
+        buyTicketBtn.textContent = 'Buy Ticket';
+        buyTicketBtn.addEventListener("click", (e) => {
+          if (availableTicketsCount > 0) {
+            
+            availableTicketsCount--;
+            availableTickets.innerHTML = `<strong>Available Tickets: </strong>${availableTicketsCount}`;
+            buyTicketBtn.textContent = 'Buy Ticket';
+          }  if (availableTickets === 0){
+            buyTicketBtn.textContent = "Sold Out";
+            buyTicketBtn.disabled = true;
+          }
+          else {
+            buyTicketBtn.textContent = "Sold out"
+          }
+      
+        });
        }
 }    
