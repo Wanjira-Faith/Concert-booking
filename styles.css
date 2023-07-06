@@ -31,6 +31,7 @@
     color: #ccc;
     text-decoration: none;
     margin: 10px;
+    cursor: pointer;
     background-color: rgb(56, 16, 95);
     border-radius: 15px;
     font-family: inter ;
