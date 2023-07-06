@@ -69,3 +69,10 @@
     color: #ccc;
     border-bottom: 1px solid;
   }
+  .music-details,.list-container{
+    background-color: rgba(1, 1, 26, 0.897);
+    padding: 15px;
+    color: #ccc;
+    border-radius: 10px;
+    margin: 20px auto;
+  }
