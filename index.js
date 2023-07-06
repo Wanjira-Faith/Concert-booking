@@ -24,6 +24,7 @@ function displayMusicList(artists) {
     if(artistIndex){
       displayMusicDetails(artistIndex)
        }
+
        function displayMusicDetails(artist) {
         const musicImage = document.getElementById("image");
         const name = document.querySelector(".name");
@@ -33,6 +34,13 @@ function displayMusicList(artists) {
         const availableTickets = document.getElementById("available-tickets");
         const buyTicketBtn = document.getElementById("buy-ticket-btn");
         const liveBtn = document.getElementById("live-concert-btn");
-       }
       
+        musicImage.src = artist.image;
+        name.textContent = artist.name;
+        text.innerHTML = `<strong>Popular releases: </strong>${artist.popular_releases}`;
+        date.innerHTML = `<strong>Date & Time: </strong>${artist.showtime}`;
+        location.innerHTML = `<strong>Location: </strong>${artist.location}`;
+        let availableTicketsCount = artist.capacity - artist.tickets_sold;
+        availableTickets.innerHTML = `<strong>Available Tickets: </strong>${availableTicketsCount}`;
+       }
 }    
