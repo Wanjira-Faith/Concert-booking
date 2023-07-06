@@ -81,3 +81,21 @@
     height: auto; 
     margin-bottom: 20px;
   }
+  .music-details{
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  .music-details .name {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+  }
+  .music-details .text,#location,#date,#available-tickets {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
