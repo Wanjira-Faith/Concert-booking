@@ -110,4 +110,10 @@
     background-color: rgba(1, 1, 26, 0.897);
     border-radius: 5px;
   }
+  #artist-form h2{
+    margin-bottom: 10px;
+  }
+  .user-form h3{
+    margin-bottom: 10px;
+  }
 
