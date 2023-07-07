@@ -1,7 +1,16 @@
 # Concert-booking-site
 
 # Description
-This is a web application designed for displaying and managing a list of artists and their music details. It provides users with the ability to view the list of artists, select an artist to see their details, purchase concert tickets, watch live concerts, and delete artists from the list. 
+Welcome to the Concert Booking Site, where users can book tickets for concerts by various artists. This application provides an easy to use interface for browsing artists, viewing concert details, purchasing tickets, and more.
+
+# Built with
+ Javascript
+
+ HTML
+
+ CSS
+  
+ 
 
 # Prerequisites
 To run this application locally, you need to have the following installed:
@@ -10,22 +19,20 @@ To run this application locally, you need to have the following installed:
     Node.js
     npm 
 
-# Json Database File
+# Json Server
 Access the JSON database file here https://artists-concert.onrender.com/.
 
 
-# Installation
+# Getting Started
 1. Clone the repository to your local machine:
- `git clone https://github.com/your-username/concert-booking-site.git
+ `git clone https://github.com/Wanjira-Faith/concert-booking-site.git
 `
 2. Open a terminal and navigate to the project's directory.
-3.  Install and Run Json Server using the following commands;
-
-    `npm install -g json-server`
-
-    `json-server--watch db.json`
+3. Cd Concert-booking-site
 
 # Running the application
+  To run the app follow these steps:
+
 1. Open your web browser and navigate to http://localhost:3000 to access the application .
 
 2. The application will display a list of artists. Click on an artist's name to view their details, including popular releases, date and time of the concert, location, and the number of available tickets.    
@@ -56,4 +63,4 @@ If you have any questions or suggestions, please feel free to contact Wanjira at
 
 Thank you for using this web application!
 
-`https://wanjira-faith.github.io/Concert-booking/`
+# https://wanjira-faith.github.io/Concert-booking/
