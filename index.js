@@ -1,10 +1,10 @@
 document.addEventListener("DOMContentLoaded", () => {
     fetchArtists();
   });
-const url = "http://localhost:3000/artists";
+const url = "http://localhost:3000";
 
 function fetchArtists() {
-  fetch(url)
+  fetch(db.json)
     .then((resp) => resp.json())
     .then((artists) => {
       displayMusicList(artists);
