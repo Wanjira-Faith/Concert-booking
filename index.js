@@ -55,7 +55,7 @@ function displayMusicList(artists) {
 
           }  if (availableTicketsCount === 0){
             buyTicketBtn.textContent = "Sold Out";
-            buyTicketBtn.disabled = true;
+            // buyTicketBtn.disabled = true;
           } 
         });
         liveBtn.textContent = 'Live Concert';
