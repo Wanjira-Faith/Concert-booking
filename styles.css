@@ -29,6 +29,12 @@
   display: flex;
   justify-content: space-between;
   padding: 10px 10px 9px 10px;
+  transition: ease-in-out 0.15s;
+}
+.navbar a:hover {
+  background-color: rgba(66, 11, 114, 0.692);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+  transition: box-shadow 0.3s ease-in-out;
 }
 .navbar a {
     color: #ccc;
@@ -39,6 +45,7 @@
     border-radius: 15px;
     font-family: inter ;
     padding: 10px;
+
   }
   .home-content{
     margin-left: 5%;
@@ -46,6 +53,7 @@
     line-height: 2cm;
     color: #ccc;
     margin-top: 68px;
+    margin-left: 50px;
   }
   .home-content h2{
     font-size: 68px;
@@ -177,7 +185,6 @@
     text-align: center;
     padding: 10px;
   }
-
     .delete-btn {
       float: right;
       background-color: rgba(169, 42, 65, 1);
