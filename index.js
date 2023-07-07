@@ -6,28 +6,25 @@ const url = "http://localhost:3000/artists";
 function fetchArtists() {
   fetch(url)
     .then((resp) => resp.json())
-    .then((artists) => displayMusicList(artists));
+    .then((artists) => {
+      displayMusicList(artists);
+      displayMusicDetails(artists[7]); 
+    });
 }
 //displays all artists list
 function displayMusicList(artists) {
     const musicList = document.getElementById("music-list");
-  
-      artists.forEach((artist,index) => {
+
+      artists.forEach((artist) => {
       const listItem = document.createElement("li");
       listItem.textContent = artist.name;
       listItem.addEventListener("click", () => {
         displayMusicDetails(artist);
-        musicList.innerHTML = "";
       });
 
       musicList.appendChild(listItem);
     });
-  
-    const artistIndex = artists[7];
-    if(artistIndex){
-      displayMusicDetails(artistIndex)
-       }
-    }
+  }
            //display artists details
        function displayMusicDetails(artist) {
         const musicImage = document.getElementById("image");
@@ -113,9 +110,7 @@ function displayMusicList(artists) {
           });
           musicList.appendChild(listItem);
         }
-    
-        const url = "http://localhost:3000/artists";
-    
+      
         fetch(url, {
           method: "POST",
           headers: {
@@ -125,14 +120,18 @@ function displayMusicList(artists) {
         })
           .then((resp) => resp.json())
           .then((artist) => {
-            addArtistToMusicList(artist);
+            if (artist.id){
+              addArtistToMusicList(artist);
     
-            // Clear input fields
+          
             nameInput.value = "";
             imageInput.value = "";
             popularReleasesInput.value = "";
     
             console.log("Artist added:", artist);
+          }else{
+            console.log('Artis has no ID:', artist);
+          }
           })
           .catch((error) => console.log(error));
       });
