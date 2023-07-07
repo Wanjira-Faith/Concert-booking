@@ -1,7 +1,7 @@
 # Concert-booking-site
 
 # Description
-    This is a web application designed for displaying and managing a list of artists and their music details. It provides users with the ability to view the list of artists, select an artist to see their details, purchase concert tickets, watch live concerts, and delete artists from the list. 
+This is a web application designed for displaying and managing a list of artists and their music details. It provides users with the ability to view the list of artists, select an artist to see their details, purchase concert tickets, watch live concerts, and delete artists from the list. 
 
 # Prerequisites
 To run this application locally, you need to have the following installed:
@@ -21,9 +21,9 @@ Access the JSON database file here https://artists-concert.onrender.com/.
 2. Open a terminal and navigate to the project's directory.
 3.  Install and Run Json Server using the following commands;
 
-`npm install -g json-server`
+    `npm install -g json-server`
 
-`json-server--watch db.json`
+    `json-server--watch db.json`
 
 # Running the application
 1. Open your web browser and navigate to http://localhost:3000 to access the application .
@@ -55,3 +55,5 @@ This project is licensed under the MIT License.
 If you have any questions or suggestions, please feel free to contact Wanjira at wanjirafaith22@gmail.com
 
 Thank you for using this web application!
+
+`https://wanjira-faith.github.io/Concert-booking/`
