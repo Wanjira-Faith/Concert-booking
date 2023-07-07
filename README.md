@@ -63,4 +63,3 @@ If you have any questions or suggestions, please feel free to contact Wanjira at
 
 Thank you for using this web application!
 
-# https://wanjira-faith.github.io/Concert-booking/
