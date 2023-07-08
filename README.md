@@ -2,19 +2,12 @@
 
 # Table of Content
 1. Description
-
 2. Built with
-
 3. Prerequisites
-
 4. Json Server 
-
 5. Getting Started
-
 6. Running the application
-
 7. License
-
 8. Author
 
 
@@ -68,8 +61,6 @@ This project is licensed under the MIT License.
 Wanjira Faith (Software Engineer)
 
 Email: wanjirafaith22@gmail
-
-Thank you for using this web application!
 
 
 Live page link
