@@ -1,8 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     fetchArtists();
   });
-// const url = "https://artists-concert.onrender.com/artists";
- const url =" http://localhost:3000/artists"
+const url = "https://artists-concert.onrender.com/artists";
 
 function fetchArtists() {
   fetch(url)
