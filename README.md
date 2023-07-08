@@ -1,5 +1,23 @@
 # Concert-booking-site
 
+# Table of Content
+1. Description
+
+2. Built with
+
+3. Prerequisites
+
+4. Json Server 
+
+5. Getting Started
+
+6. Running the application
+
+7. License
+
+8. Author
+
+
 # Description
 Welcome to the Concert Booking Site, where users can book tickets for concerts by various artists. This application provides an easy to use interface for browsing artists, viewing concert details, purchasing tickets, and more.
 
@@ -10,8 +28,6 @@ Welcome to the Concert Booking Site, where users can book tickets for concerts b
 
  CSS
   
- 
-
 # Prerequisites
 To run this application locally, you need to have the following installed:
 
@@ -45,21 +61,17 @@ Access the JSON database file here https://artists-concert.onrender.com/.
 
 6. To add a new artist to the list, scroll to the bottom of the page and fill out the form with the artist's name, image URL, and popular releases. Click the "Submit" button to add the artist to the list. The new artist will appear at the bottom of the artist list.
 
-# Contributing
-If you'd like to contribute to this project, please follow these guidelines:
-
-1. Fork the repository.
-2. Create a new branch for your feature .
-3. Make your changes and test them .
-4. Commit your changes and push them to your fork.
-5. Submit a pull request, explaining your changes and the problem they solve.
-
 #  License
 This project is licensed under the MIT License.
 
+# Author
+Wanjira Faith (Software Engineer)
 
-# Contact
-If you have any questions or suggestions, please feel free to contact Wanjira at wanjirafaith22@gmail.com
+Email: wanjirafaith22@gmail
 
 Thank you for using this web application!
 
+
+Live page link
+
+ https://wanjira-faith.github.io/Concert-booking/
