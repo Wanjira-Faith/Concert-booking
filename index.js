@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     fetchArtists();
   });
-const url = "https://artists-concert.onrender.com/artists";
+// const url = "https://artists-concert.onrender.com/artists";
+ const url =" http://localhost:3000/artists"
 
 function fetchArtists() {
   fetch(url)
@@ -18,12 +19,28 @@ function displayMusicList(artists) {
       artists.forEach((artist) => {
       const listItem = document.createElement("li");
       listItem.textContent = artist.name;
+      musicList.appendChild(listItem);
+
+  
       listItem.addEventListener("click", () => {
         displayMusicDetails(artist);
       });
+  
+      const deleteBtn = document.createElement('button');
+      deleteBtn.classList.add('delete-btn');
+      deleteBtn.textContent = 'Delete';
+      listItem.appendChild(deleteBtn)
+    
+      deleteBtn.addEventListener('click', function (event) {
+          event.stopPropagation();
+          const confirmation = confirm('Delete Artist Permanently?');
 
-      musicList.appendChild(listItem);
+          if (confirmation) {
+              deleteArtist(artist, listItem);
+          }
+      });
     });
+      return musicList;
   }
            //display artists details
        function displayMusicDetails(artist) {
@@ -35,8 +52,6 @@ function displayMusicList(artists) {
         const availableTickets = document.getElementById("available-tickets");
         const buyTicketBtn = document.getElementById("buy-ticket-btn");
         const liveBtn = document.getElementById("live-concert-btn");
-        const deleteBtn = document.querySelector(".delete-btn");
-
 
         musicImage.src = artist.image;
         name.textContent = artist.name;
@@ -54,8 +69,9 @@ function displayMusicList(artists) {
             buyTicketBtn.textContent = 'Buy Ticket';
 
           }  if (availableTicketsCount === 0){
+            buyTicketBtn.disabled = true;
             buyTicketBtn.textContent = "Sold Out";
-            // buyTicketBtn.disabled = true;
+            
           } 
         });
         liveBtn.textContent = 'Live Concert';
@@ -63,24 +79,46 @@ function displayMusicList(artists) {
            alert("Download the link from our official website to watch the live concert!");
      });
 
-     deleteBtn.textContent = 'Delete';
-     deleteBtn.addEventListener('click', () => {
-     deleteArtist(artist.id);
-    });
- }  
- function deleteArtist(artistId) {
-  fetch(`${url}/${artistId}`, {
-    method: "DELETE",
-  })
-    .then((resp) => {
-      if (resp.ok) {
-        console.log("Artist deleted:", artistId);
-
-      } else {
-        console.error("Failed to delete artist:", artistId);
-      }
-    })
 }
+  function deleteArtist(artist, listItem) {
+    const deleteUrl = `${url}/${artist.id}`;
+    const requestOptions = {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    };
+  
+    fetch(deleteUrl, requestOptions)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Delete request failed');
+        }
+
+        // Clear the music details
+        const musicImage = document.getElementById("image");
+        const name = document.querySelector(".name");
+        const text = document.querySelector(".text");
+        const date = document.getElementById("date");
+        const location = document.getElementById("location");
+        const availableTickets = document.getElementById("available-tickets");
+  
+        musicImage.src = "";
+        name.textContent = "";
+        text.innerHTML = "";
+        date.innerHTML = "";
+        location.innerHTML = "";
+        availableTickets.innerHTML = "";
+  
+        // Remove the artist from the music list
+        listItem.remove();
+        alert('Artist deleted!');
+      })
+      .catch((error) => {
+        console.error('Delete request error:', error);
+        alert('Failed to delete artist');
+      });
+  }
     document.addEventListener("DOMContentLoaded", () => {
       const form = document.getElementById("artist-form");
       form.addEventListener("submit", (e) => {
@@ -134,4 +172,4 @@ function displayMusicList(artists) {
     });
     
     
- 
+  
